@@ -1,18 +1,25 @@
-#include <stdio.h>
+#include<stdio.h>
 
 /**
- * main - prints the alphabet in lowercase, and then in uppercase,
- * followed by a new line
+ * main - Entry point
+ *
+ * Description: print all aplhabet letters except q and e
+ *
  * Return: Always 0 (Success)
- */
+*/
+
 int main(void)
 {
-	int ch;
+	char ch = 'a';
 
-	for (ch = 'a'; ch <= 'z'; ch++)
+	while (ch <= 'z')
+	{
+		if (ch == 'e' || ch == 'q')
+			++ch;
 		putchar(ch);
-	for (ch = 'A'; ch <= 'Z'; ch++)
-		putchar(ch);
+		++ch;
+	}
 	putchar('\n');
+
 	return (0);
 }
